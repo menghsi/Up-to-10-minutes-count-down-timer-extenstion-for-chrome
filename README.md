@@ -8,7 +8,7 @@ When the timer completes it plays a sound and display notification.
 #Snapshots:
 <b>Basic setup for timer:</b>
 <br/><br/>
-![count down timer setup](https://github.com/govindpatel/extensions/blob/master/g-extension/cdt_timer.PNG)
+![count down timer setup](https://github.com/govindpatel/extensions/blob/master/g-extension/cdt_timer.png)
 <hr/>
 <b>Notification is displayed when timer completes:</b>
 <br/><br/>
