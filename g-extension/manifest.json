@@ -1,23 +1,22 @@
 {
-  "manifest_version": 2,
-  "name": "Count Down Timer",
-  "description": "Simple count down timer - by govindpatel(https://github.com/govindpatel)",
-  "version": "1.0",
-  "background": {
-    "scripts": ["js/background.js"],
-    "persistent": false
-  },
-  "browser_action": {
-    "default_icon": "res/icon1.png",
-    "default_popup": "popup.html",
-    "default_title": "Count Down Timer"
-  },
-  "icons":{
-    "16":"res/icon1.png",
-    "48":"res/icon32.png",
-    "128":"res/icon128.png"
-  },
-  "permissions": [
-  "notifications"
-  ]
+   "background": {
+      "persistent": false,
+      "scripts": [ "js/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": "res/icon1.png",
+      "default_popup": "popup.html",
+      "default_title": "Up to 10 minutes count down timer"
+   },
+   "description": "Simple 10 minutes count down timer - by menghsi(https://github.com/menghsi)",
+   "icons": {
+      "128": "res/icon128.png",
+      "16": "res/icon1.png",
+      "48": "res/icon32.png"
+   },
+   "manifest_version": 2,
+   "name": "Up to 10 minutes count down timer",
+   "permissions": [ "notifications" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0"
 }
