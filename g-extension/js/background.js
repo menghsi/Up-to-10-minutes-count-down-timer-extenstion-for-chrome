@@ -80,12 +80,18 @@ var updateUI = function(){
     dhr = 0;
     dmin = 0;
     dsec = 0;
-    var timeValue  = twoDigit(dhr)+":"+twoDigit(dmin)+":"+twoDigit(dsec);
+    
+	//menghsi var timeValue  = twoDigit(dhr)+":"+twoDigit(dmin)+":"+twoDigit(dsec);
+	var timeValue  = twoDigit(dmin)+":"+twoDigit(dsec);
+	
     console.log(timeValue);
     chrome.runtime.sendMessage({"message":"displayTime","timeValue":timeValue});
     // badge
-    var badgeText = twoDigit(dhr)+""+twoDigit(dmin);// show only hr:min, max(size) = 5
-    chrome.browserAction.setBadgeText({text:badgeText});
+    
+	//menghsi var badgeText = twoDigit(dhr)+""+twoDigit(dmin);// show only hr:min, max(size) = 5
+    var badgeText = twoDigit(dmin)+""+twoDigit(dsec);// show only min:sec, max(size) = 5
+	
+	chrome.browserAction.setBadgeText({text:badgeText});
     // popUp
     // chrome.browserAction.setPopup({popup:timeValue});
     //title
@@ -100,12 +106,18 @@ var updateUI = function(){
     diffMS /= 60;
     diffMS = parseInt(diffMS);
     dhr = diffMS;
-    var timeValue  = twoDigit(dhr)+":"+twoDigit(dmin)+":"+twoDigit(dsec);
+    
+	//menghsi var timeValue  = twoDigit(dhr)+":"+twoDigit(dmin)+":"+twoDigit(dsec);
+	var timeValue  = twoDigit(dmin)+":"+twoDigit(dsec);
+	
     console.log(timeValue);
     chrome.runtime.sendMessage({"message":"displayTime","timeValue":timeValue});
     // badge
-    var badgeText = twoDigit(dhr)+""+twoDigit(dmin);
-    chrome.browserAction.setBadgeText({text:badgeText});
+    
+	//menghsi var badgeText = twoDigit(dhr)+""+twoDigit(dmin);
+	var badgeText = twoDigit(dmin)+""+twoDigit(dsec);
+    
+	chrome.browserAction.setBadgeText({text:badgeText});
     // popUp
     // chrome.browserAction.setPopup({popup:timeValue});
     //title
@@ -132,5 +144,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
   }else if(request.message === "get_status"){
     sendResponse({"timer":running});
   }
+});
 });
 
