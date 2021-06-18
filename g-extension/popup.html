@@ -1,0 +1,42 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>CDT - Count Down Timer</title>
+    <script type="text/javascript" src="ext_res/bootstrap-slider.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="ext_res/bootstrap-slider.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+    <div id="header">
+      <!-- <div id="topHR"/> -->
+      CDT - Count Down Timer
+      <hr/>
+    </div>
+    <div id="timerArea">
+      <span id="minText">05</span>
+      <div id="minutesTimer">
+      <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5" data-slider-tooltip="always"/>
+      </div> <!-- minutesTimer end-->
+      <!--<br/>-->
+      <!--SET MINUTES : <span id="minText">05</span>
+	  <div id="minutesTimer">
+        <input id="ex2" data-slider-id='ex2Slider' type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5" data-slider-tooltip="always"/>
+      </div><!-- minTimer end-->
+    </div><!-- Timer Area end-->
+    <br/>
+    <div id="buttonArea">
+        <button id = "startTimer">Start Timer</button>
+        <button id = "stopTimer">Stop Timer</button>
+    </div>
+    <div id="displayTimerArea">
+      Remaining Time: <span id="displayTime">00:00</span>
+    </div>
+    <script type="text/javascript" src="js/popup.js"></script>
+  </body>
+</html>
+
