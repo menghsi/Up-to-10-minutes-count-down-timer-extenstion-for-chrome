@@ -1,4 +1,3 @@
-
 chrome.extension.isAllowedIncognitoAccess(function(isAllowedAccess) {
   // console.log("isAllowedAccess : "+isAllowedAccess);
   if(isAllowedAccess)return;
@@ -13,8 +12,8 @@ chrome.runtime.sendMessage({"message":"get_status"},function(response){
 
 
 // slider
-var hrSlider = new Slider('#ex1', {});
-var minSlider = new Slider('#ex2',{});
+//menghsi var hrSlider = new Slider('#ex1', {});
+var minSlider = new Slider('#ex1',{});
 
 var twoDigit = function(num){
   if ( num < 10){
@@ -25,19 +24,23 @@ var twoDigit = function(num){
 };
 
 // slider event
+/*menghsi
 hrSlider.on("slide", function(evntName){
   // console.log("Sliding value:"+hrSlider.getValue());
   document.getElementById("hrText").innerHTML = twoDigit(hrSlider.getValue());
-}); 
+});
+*/ 
 minSlider.on("slide", function(evntName){
   // console.log("Sliding value:"+minSlider.getValue());
 document.getElementById("minText").innerHTML = twoDigit(minSlider.getValue());
 });
 
+/*menghsi
 hrSlider.on("slideStop", function(evntName){
   // console.log("Sliding value:"+hrSlider.getValue());
   document.getElementById("hrText").innerHTML = twoDigit(hrSlider.getValue());
-}); 
+});
+*/ 
 minSlider.on("slideStop", function(evntName){
   // console.log("Sliding value:"+minSlider.getValue());
 document.getElementById("minText").innerHTML = twoDigit(minSlider.getValue());
@@ -45,7 +48,8 @@ document.getElementById("minText").innerHTML = twoDigit(minSlider.getValue());
 
 // when startTimer button is clicked
 document.getElementById("startTimer").addEventListener("click", function(){
-  h = hrSlider.getValue();
+  //menghsi h = hrSlider.getValue();
+  h = 0;
   m = minSlider.getValue();
   this.disabled = true;
   // console.log("Starting timer: "+h+":"+m);
