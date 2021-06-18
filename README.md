@@ -8,7 +8,7 @@ When the timer completes it plays a sound and display notification.
 #Snapshots:
 <b>Basic setup for timer:</b>
 <br/><br/>
-![count down timer setup](https://github.com/menghsi/Up-to-10-minutes-count-down-timer-extenstion-for-chrome-/cdt_timer.png)
+![count down timer setup](https://github.com/menghsi/Up-to-10-minutes-count-down-timer-extenstion-for-chrome/g-extention/cdt_timer.png)
 <hr/>
 <b>Notification is displayed when timer completes:</b>
 <br/><br/>
